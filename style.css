@@ -23,6 +23,9 @@ body {
 #Name h2 {
     font-size: 24px;
 }
+#menu-toggle {
+    display: none;
+}
 #Navigation {
     position: sticky;
     top: 0;
@@ -235,12 +238,26 @@ html {
     scroll-behavior: smooth;
 }
 @media (max-width: 600px) {
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text);
+        font-size: 28px;
+        cursor: pointer;
+    }
     #Navigation {
-         gap: 18px;
+        gap: 18px;
         padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
     }
     #Navigation a {
+        display: none;
         font-size: 14px;
+    }
+    #Navigation.menu-open a {
+        display: block;
     }
     #hero h1 {
         font-size: 42px;
